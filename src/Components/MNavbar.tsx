@@ -106,7 +106,7 @@ export const MNavbar = (props) => {
                   </IconButton>
                 </Box>
                 <span className="text-sm text-gray-500 dark:text-gray-400">
-                  Visual Designer
+                  {props.speciality}
                 </span>
               </Box>
             </Box>

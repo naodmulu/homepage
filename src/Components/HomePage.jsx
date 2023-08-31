@@ -9,7 +9,9 @@ import MNavbar from "./MNavbar";
 import { useNavigate } from "react-router-dom";
 
 function HomePage() {
-  const username = "UserName";
+  let username = "User Name";
+  let speciality = "Heart Specialist";
+
   const navgate = useNavigate();
   const gate = () => {
     navgate("/result");
@@ -17,12 +19,9 @@ function HomePage() {
 
   return (
     <div>
-      <MNavbar username={username} />
+      <MNavbar username={username} speciality={speciality}  />
       <div className="text-black body_Center">
-        <div className="flex">
           <UploadFile />
-          <DataInput />
-        </div>
         <div className="items-center">
           <button
             id="upload_data"

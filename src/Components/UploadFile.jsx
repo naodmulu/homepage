@@ -10,6 +10,7 @@ import { FormLabel,
         } from '@mui/material';
 import RemoveIcon from '@mui/icons-material/Remove';
 import { Remove } from '@mui/icons-material';
+import DataInput from './DataInput';
 
 const UploadFile = () => {
   const [files, setFiles] = useState([]);
@@ -135,31 +136,32 @@ const UploadFile = () => {
   );
 
   return (
-    <FormLabel className="items-center upload rounded-lg mt-4 mb-4 shadow">
-      <div className=" items-center justify-center">
-        <Typography 
-        varient="h2" 
-        sx={{
-          width:"190px",
-          margin:"auto",
-          marginTop:"15px",
-          fontSize:"15px",
-          textAlign:"center",
-          color:"#ffffff",
-          backgroundColor:"#22d3ee",
-          borderRadius:"15px",
-          padding:"8px 10px",
-          
-          }}> 
-            Upload Patient Video
-        </Typography >
-
-
-      </div>
-      <Grid onClick={handleFileClick} >
-        {uploadedFileNames.length > 0 ? showUploadedFiles() : showUploadSection()}
-      </Grid>
-    </FormLabel>
+    <div className="flex">
+      <FormLabel className="items-center upload rounded-lg mt-4 mb-4 shadow">
+        <div className=" items-center justify-center">
+          <Typography
+          varient="h2"
+          sx={{
+            width:"190px",
+            margin:"auto",
+            marginTop:"15px",
+            fontSize:"15px",
+            textAlign:"center",
+            color:"#ffffff",
+            backgroundColor:"#22d3ee",
+            borderRadius:"15px",
+            padding:"8px 10px",
+      
+            }}>
+              Upload Patient Video
+          </Typography >
+        </div>
+        <Grid onClick={handleFileClick} >
+          {uploadedFileNames.length > 0 ? showUploadedFiles() : showUploadSection()}
+        </Grid>
+      </FormLabel>
+      <DataInput />
+    </div>
   );
 };
 

@@ -9,9 +9,9 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/h" element={<HomePage />} />
-        <Route path="/result" element={<Result />}/>
-        <Route path="/" element={<ImageGen />}/>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/Result" element={<Result />}/>
+        <Route path="/ImageGen" element={<ImageGen />}/>
       </Routes>
     </div>
   );
